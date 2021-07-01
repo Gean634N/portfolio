@@ -7,12 +7,17 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  user-select: none;
 }
 
 :root{
   --font-primary: 'Baloo Da 2', serif;
   --font-secundary: 'Josefin Slab', serif;
   --font-action: 'Mulish', serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .hamburguer{
@@ -175,6 +180,7 @@ header{
   top: 0;
   right: -20rem;
   transition: all 1s;
+  z-index: 50;
 }
 
 .show-menu .sidebar{
@@ -544,7 +550,7 @@ header{
   font-size: 2rem;
   font-weight: lighter;
   box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 .sessao-orcamento form {
@@ -577,4 +583,52 @@ header{
   padding: 1rem;
   cursor: pointer;
   grid-column: 2;
+}
+
+footer {
+  width: 100%;
+  height: 17vh;
+  background-color: #17181b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-content {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-content p {
+  font-family: var(--font-secundary);
+  color: #a7a7a7;
+  font-size: 1.2rem;
+}
+
+.social-list a {
+  margin: 0 2rem;
+  color: #a7a7a7;
+  font-size: 1.3rem;
+}
+
+.social-list ul {
+  display: flex;
+}
+
+#link-topo {
+  position: fixed;
+  right: 3rem;
+  bottom: 3rem;
+  width: 3rem;
+  height: 3rem;
+  background: #168;  /* Navegadores antigos */
+  background: -webkit-linear-gradient(to left, #4286f4, #1a2a4b); 
+  background: linear-gradient(to left, #4286f4, #1a2a4b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: .3rem;
+  box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
 }

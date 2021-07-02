@@ -14,7 +14,6 @@ document.querySelector('#prazo').addEventListener('change', () => {
   atualizarPreco();
 });
 
-
 function atualizarPreco () {
   const qtde = document.querySelector('#qtde').value;
   const temJS = document.querySelector('#js').checked;
@@ -26,8 +25,14 @@ function atualizarPreco () {
   if (incluiLayout) preco += 500;
   if (temJS) preco *= 1.1;
 
-  let taxaUrhencia = (1 - prazo*0.1) * preco;
-  preco += taxaUrhencia;
+  let taxaUrgencia = (1 - prazo*0.1) * preco;
+  preco += taxaUrgencia;
 
   document.querySelector('#preco').innerHTML = `R$ ${preco.toFixed(2)}`;
 }
+ 
+const loader = document.querySelector('.overlay');
+
+window.addEventListener('load', () => {
+  setTimeout(() => loader.classList.add('disapear') , 1000);
+});
